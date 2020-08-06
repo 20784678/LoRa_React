@@ -6,8 +6,6 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      loggedIn: true,
-
       sideNavOpen: true,
     };
   }
@@ -17,7 +15,7 @@ class App extends React.Component {
     return (
       <div style={{position: 'absolute', width: '100%', height: '100%', background: 'red'}}>
         <div style={{width: '100px' ,height: '100%', background: 'blue' }}></div>
-
+          
       </div>
     )
   }
