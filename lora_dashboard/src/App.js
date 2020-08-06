@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from "prop-types";
-import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 
 class App extends React.Component {
 
@@ -15,6 +14,9 @@ class App extends React.Component {
 
 	render()	{
     const { classes, ...rest } = this.props;
+    return (
+      <div style={{position: 'absolute', width: '100%', height: '100%', background: 'blue'}}></div>
+    )
   }
 
 }
