@@ -15,7 +15,10 @@ class App extends React.Component {
 	render()	{
     const { classes, ...rest } = this.props;
     return (
-      <div style={{position: 'absolute', width: '100%', height: '100%', background: 'red'}}></div>
+      <div style={{position: 'absolute', width: '100%', height: '100%', background: 'red'}}>
+        <div style={{width: '100px' ,height: '100%', background: 'blue' }}></div>
+
+      </div>
     )
   }
 
