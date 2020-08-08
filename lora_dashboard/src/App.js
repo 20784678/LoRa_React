@@ -28,13 +28,11 @@ class App extends React.Component {
     return (
       
       <div style={{position: 'absolute', width: '100%', height: '100%', background: 'white'}}> {/* background */}
-        <div style={{poisition: 'absolute', width:'100%',height:'90px',background:'lightblue',display:'flex', alignItems: 'center'}}> {/* top naivigation bar */}
+        <div style={{position: 'absolute', width:'100%',height:'90px',background:'lightblue',display:'flex', alignItems: 'center'}}> {/* top naivigation bar */}
           <Button variant= {this.state.buttonSensorListPressed ? "primary":"outline-primary"} onClick={() => this.buttonSensorListPressed()} style={{marginLeft: '20px'}}>SENSOR LIST</Button>{' '} {/*Button style imported*/}
-          <div style = {{position: 'absolute', display: 'flex', flexDirection: 'column', alignItems:'center'}}>
-           
-          </div>
+          <ToggleButtonExample></ToggleButtonExample>
         </div>
-        <div style={{position: 'fixed',width: 'calc(100% + 135px)',left: this.state.sideNavOpen ? '0px' : '-135px',transition: 'all 0.3s ease',top:'90px',background:'lightpink',height:'calc(100% - 90px)'}}> {/*content container*/}
+        <div style={{position: 'fixed',width: 'calc(100% + 135px)',left: this.state.sideNavOpen ? '0px' : '-135px',transition: 'all 0.3s ease',top:'90px',background:'white',height:'calc(100% - 90px)'}}> {/*content container*/}
           {/*Stick content here*/}
           <SideNav></SideNav>
         </div>
@@ -59,24 +57,25 @@ function ToggleButtonExample() {
   const [radioValue, setRadioValue] = useState('1');
 
   const radios = [
-    { name: 'RAW', value: '1' },
-    { name: 'GRAPH', value: '2' },
-    { name: 'ELSE', value: '3' },
+    { name: 'VIEW 1', value: '1' },
+    { name: 'VIEW 2', value: '2' },
+    { name: 'VIEW 3', value: '3' },
+    { name: 'VIEW 4', value: '4'},
   ];
 
   return (
     <>
-      <ButtonGroup toggle>
+      <ButtonGroup toggle style={{marginLeft: '100px'}}>
         {radios.map((radio, idx) => (
           <ToggleButton
             key={idx}
             type="radio"
             variant="outline-primary"
             name="radio"
-            size="lg"
             value={radio.value}
             checked={radioValue === radio.value}
             onChange={(e) => setRadioValue(e.currentTarget.value)}
+            style = {{display: 'flex', alignItems: 'center'}}
           >
             {radio.name}
           </ToggleButton>

@@ -16,7 +16,7 @@ class SideNav extends React.Component {
 	render()	{
     const { classes, ...rest } = this.props;
     return (
-          <div style={{position: 'absolute', width: '135px', background: 'transparent', display: 'flex', flexDirection:'column', alignItems: 'center'}}>
+          <div style={{position: 'absolute', width: '135px', height: '100%', background: 'lightBlue', display: 'flex', flexDirection:'column', alignItems: 'center'}}>
           <Button variant="outline-primary" style={{marginTop:'15px'}}>SENSOR 1</Button>
           <Button variant="outline-primary" style={{marginTop:'15px'}}>SENSOR 2</Button>
           <Button variant="outline-primary" style={{marginTop:'15px'}}>SENSOR 3</Button>
