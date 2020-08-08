@@ -31,15 +31,14 @@ class App extends React.Component {
         <div style={{poisition: 'absolute', width:'100%',height:'90px',background:'lightblue',display:'flex', alignItems: 'center'}}> {/* top naivigation bar */}
           <Button variant= {this.state.buttonSensorListPressed ? "primary":"outline-primary"} onClick={() => this.buttonSensorListPressed()} style={{marginLeft: '20px'}}>SENSOR LIST</Button>{' '} {/*Button style imported*/}
           <div style = {{position: 'absolute', display: 'flex', flexDirection: 'column', alignItems:'center'}}>
-            <ToggleButtonExample></ToggleButtonExample>
+           
           </div>
         </div>
-        <div style={{position: 'fixed',width: '100%', height:'calc(100%-90px)',left: this.state.sideNavOpen ? '0px' : '-300px',transition: 'all 0.3s ease'}}> {/*content container*/}
+        <div style={{position: 'fixed',width: 'calc(100% + 135px)',left: this.state.sideNavOpen ? '0px' : '-135px',transition: 'all 0.3s ease',top:'90px',background:'lightpink',height:'calc(100% - 90px)'}}> {/*content container*/}
           {/*Stick content here*/}
           <SideNav></SideNav>
         </div>
       </div>
-      
     )
   }
 
